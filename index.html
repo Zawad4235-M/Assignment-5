@@ -12,10 +12,10 @@
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
-<body>
+<body class="bg-[#f5fff6]">
   <!-- Nav -->
 
-  <nav class="p-4 flex flex-col lg:flex-row lg:justify-between primary-font max-w-[1920px]">
+  <nav class="p-4 flex flex-col lg:flex-row lg:justify-between primary-font">
     <!-- Left Corner -->
     <div class="flex flex-col gap-3 lg:justify-center mb-4 lg:mb-0 lg:flex-row items-center">
       <img src="./assets/logo.png" alt="" class="h-[50px] w-[50px]">
@@ -29,12 +29,12 @@
       <!-- heart -->
       <div class="flex  gap-2  w-[120px] border-2
       border-white rounded-[50px] justify-center items-center bg-[rgb(65,255,107,.2)]">
-        <h4 class="font-extrabold">0</h4>
+        <h4 class="font-extrabold" id="heart-count">0</h4>
         <img src="./assets/heart.png" alt="" class="h-[30px] w-[30px]">
       </div>
       <!-- coins -->
       <div class="flex gap-2 w-[120px] border-2 border-white rounded-[50px] justify-center items-center bg-[rgb(65,255,107,.2)]">
-        <h4 class="font-extrabold">100</h4>
+        <h4 class="font-extrabold" id="base-coin">100</h4>
         <img src="./assets/coin.png" alt="" class="h-[24px] w-[24px]">
       </div>
       <!-- copy -->
@@ -48,7 +48,7 @@
 
   <!-- Hero -->
 
-  <div class="flex flex-col justify-center items-center bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] p-5 text-white primary-font max-w-[1920px]">
+  <div class="flex flex-col justify-center items-center bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] p-5 text-white primary-font">
     <img src="./assets/logo-dark.png" alt="" class="w-[92px] h-[92px]">
     <h3 class=" font-semibold lg:font-bold lg:text-[40px]">Emergency Service Directory</h3>
     <p class="font-semibold text-[20px] text-center mt-[10px]">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
@@ -56,23 +56,25 @@
 
   <!-- Main Section -->
 
-  <main class="lg:max-w-[1800px] border-2 border-red-500 mx-auto my-0 h-[100vh] mt-7">
+  <main class="lg:max-w-[1800px] border-2 border-white mx-auto my-0 h-[100vh] mt-7">
     <!-- cards -->
-   <div>
+   <div class="grid lg:grid-cols-3 gap-7">
+
+    
   <!--National Emergency  -->
-   <div class="lg:w-[436px] border-1 border-white shadow-sm rounded-xl"> <!--  //card -->
+   <div class=" border-1 border-white shadow-sm rounded-xl w-full bg-white"> <!--  //card -->
     <!-- head -->
     <div class="flex justify-between items-center p-4" >
       <img src="./assets/emergency.png" alt="" class="w-[32px] h-[32px]">
-      <img src="./assets/Vector (2).png" alt="">
+      <img src="./assets/Vector (2).png" alt="" id="heart1">
     </div>
 
     <!-- body -->
 
     <div class="px-4">
-      <h4 class="primary-font font-bold text-[24px]">National Emergency Number</h4>
+      <h4 class="primary-font font-bold text-[24px]" id="name1">National Emergency Number</h4>
       <h5 class="secondary-font text-[18px] text-gray-500 mb-6">National Emergency</h5>
-      <h3 class="font-bold text-[20px]">999</h3>
+      <h3 class="font-bold text-[20px]" id="num1">999</h3>
       <p class="primary-font border-2 border-white bg-[#F2F2F2] w-[53px] rounded-full text-center ml-[-10px] primary-font text-gray-500">All</p>
     </div>
 
@@ -80,7 +82,7 @@
      <div class="lg:px-4  pl-2 mt-5 mb-8 flex gap-3">
       <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500">Copy</button>
 
-      <button class="btn btn-active w-[180px] bg-[#00A63E] rounded-[8px text-white">Call</button>
+      <button class="btn btn-active w-[180px] bg-[#00A63E] rounded-[8px text-white" id="call-btn1">Call</button>
      </div>
 
 
@@ -88,13 +90,252 @@
 
   </div>
 
-   </div>
+  <!--police helpline  -->
+     <div class=" border-1 border-white shadow-sm rounded-xl w-full bg-white"> <!--  //card -->
+    <!-- head -->
+    <div class="flex justify-between items-center p-4" >
+      <img src="./assets/police.png" alt="" class="w-[32px] h-[32px]">
+      <img src="./assets/Vector (2).png" alt="" id="heart2">
+    </div>
+
+    <!-- body -->
+
+    <div class="px-4">
+      <h4 class="primary-font font-bold text-[24px]" id="name2">Police Helpline Number</h4>
+      <h5 class="secondary-font text-[18px] text-gray-500 mb-6">Police</h5>
+      <h3 class="font-bold text-[20px]" id="num2">999</h3>
+      <p class="primary-font border-2 border-white bg-[#F2F2F2] w-[53px] rounded-full text-center ml-[-10px] primary-font text-gray-500">Police</p>
+    </div>
+
+    <!-- Footer -->
+     <div class="lg:px-4  pl-2 mt-5 mb-8 flex gap-3">
+      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500">Copy</button>
+
+      <button class="btn btn-active w-[180px] bg-[#00A63E] rounded-[8px text-white" id="call-btn2">Call</button>
+     </div>
+
+
+
+
+  </div>
+
+  <!--Fire Service  -->
+
+ <div class=" border-1 border-white shadow-sm rounded-xl w-full bg-white"> <!--  //card -->
+    <!-- head -->
+    <div class="flex justify-between items-center p-4" >
+      <img src="./assets/fire-service.png" alt="" class="w-[32px] h-[32px]">
+      <img src="./assets/Vector (2).png" alt="" id="heart3">
+    </div>
+
+    <!-- body -->
+
+    <div class="px-4">
+      <h4 class="primary-font font-bold text-[24px]" id="name3">Fire Service Number</h4>
+      <h5 class="secondary-font text-[18px] text-gray-500 mb-6">Fire Service</h5>
+      <h3 class="font-bold text-[20px]" id="num3">999</h3>
+      <p class="primary-font border-2 border-white bg-[#F2F2F2] w-[53px] rounded-full text-center ml-[-10px] primary-font text-gray-500">Fire</p>
+    </div>
+
+    <!-- Footer -->
+     <div class="lg:px-4  pl-2 mt-5 mb-8 flex gap-3">
+      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500">Copy</button>
+
+      <button class="btn btn-active w-[180px] bg-[#00A63E] rounded-[8px text-white" id="call-btn3">Call</button>
+     </div>
+
+
+
+
+  </div>
+
+  <!-- Ambulance -->
+
+   <div class=" border-1 border-white shadow-sm rounded-xl w-full bg-white"> <!--  //card -->
+    <!-- head -->
+    <div class="flex justify-between items-center p-4" >
+      <img src="./assets/ambulance.png" alt="" class="w-[32px] h-[32px]">
+      <img src="./assets/Vector (2).png" alt="" id="heart4">
+    </div>
+
+    <!-- body -->
+
+    <div class="px-4">
+      <h4 class="primary-font font-bold text-[24px]" id="name4">Ambulance Service</h4>
+      <h5 class="secondary-font text-[18px] text-gray-500 mb-6">Ambulance</h5>
+      <h3 class="font-bold text-[20px]" id="num4">1994-999999</h3>
+      <p class="primary-font border-2 border-white bg-[#F2F2F2] w-[53px] rounded-full text-center ml-[-10px] primary-font text-gray-500">Health</p>
+    </div>
+
+    <!-- Footer -->
+     <div class="lg:px-4  pl-2 mt-5 mb-8 flex gap-3">
+      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500">Copy</button>
+
+      <button class="btn btn-active w-[180px] bg-[#00A63E] rounded-[8px text-white" id="call-btn4">Call</button>
+     </div>
+
+
+
+
+  </div>
+
+  <!-- Women&Child -->
+
+   <div class=" border-1 border-white shadow-sm rounded-xl w-full bg-white"> <!--  //card -->
+    <!-- head -->
+    <div class="flex justify-between items-center p-4" >
+      <img src="./assets/emergency.png" alt="" class="w-[32px] h-[32px]">
+      <img src="./assets/Vector (2).png" alt="" id="heart5">
+    </div>
+
+    <!-- body -->
+
+    <div class="px-4">
+      <h4 class="primary-font font-bold text-[24px]" id="name5">Women & Child Helpline</h4>
+      <h5 class="secondary-font text-[18px] text-gray-500 mb-6">Women & Child Helpline</h5>
+      <h3 class="font-bold text-[20px]" id="num5">109</h3>
+      <p class="primary-font border-2 border-white bg-[#F2F2F2] w-[53px] rounded-full text-center ml-[-10px] primary-font text-gray-500">Help</p>
+    </div>
+
+    <!-- Footer -->
+     <div class="lg:px-4  pl-2 mt-5 mb-8 flex gap-3">
+      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500">Copy</button>
+
+      <button class="btn btn-active w-[180px] bg-[#00A63E] rounded-[8px text-white" id="call-btn5">Call</button>
+     </div>
+
+
+
+
+  </div>
+
+  <!-- AntiCorruption -->
+
+   <div class=" border-1 border-white shadow-sm rounded-xl w-full bg-white"> <!--  //card -->
+    <!-- head -->
+    <div class="flex justify-between items-center p-4" >
+      <img src="./assets/emergency.png" alt="" class="w-[32px] h-[32px]">
+      <img src="./assets/Vector (2).png" alt="" id="heart6">
+    </div>
+
+    <!-- body -->
+
+    <div class="px-4">
+      <h4 class="primary-font font-bold text-[24px]" id="name6">Anti-Corruption Helpline</h4>
+      <h5 class="secondary-font text-[18px] text-gray-500 mb-6">Anti-Corruption</h5>
+      <h3 class="font-bold text-[20px]" id="num6">106</h3>
+      <p class="primary-font border-2 border-white bg-[#F2F2F2] w-[53px] rounded-full text-center ml-[-10px] primary-font text-gray-500">Govt</p>
+    </div>
+
+    <!-- Footer -->
+     <div class="lg:px-4  pl-2 mt-5 mb-8 flex gap-3">
+      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500">Copy</button>
+
+      <button class="btn btn-active w-[180px] bg-[#00A63E] rounded-[8px text-white" id="call-btn6">Call</button>
+     </div>
+
+
+
+
+  </div>
+
+  <!-- Electricity -->
+
+   <div class=" border-1 border-white shadow-sm rounded-xl w-full bg-white"> <!--  //card -->
+    <!-- head -->
+    <div class="flex justify-between items-center p-4" >
+      <img src="./assets/emergency.png" alt="" class="w-[32px] h-[32px]">
+      <img src="./assets/Vector (2).png" alt="" id="heart7">
+    </div>
+
+    <!-- body -->
+
+    <div class="px-4">
+      <h4 class="primary-font font-bold text-[24px]" id="name7">Electricity Helpline</h4>
+      <h5 class="secondary-font text-[18px] text-gray-500 mb-6">Electricity Outage</h5>
+      <h3 class="font-bold text-[20px]" id="num7">16216</h3>
+      <p class="primary-font border-2 border-white bg-[#F2F2F2] w-[53px] rounded-full text-center ml-[-10px] primary-font text-gray-500">Electricity</p>
+    </div>
+
+    <!-- Footer -->
+     <div class="lg:px-4  pl-2 mt-5 mb-8 flex gap-3">
+      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500">Copy</button>
+
+      <button class="btn btn-active w-[180px] bg-[#00A63E] rounded-[8px text-white" id="call-btn7">Call</button>
+     </div>
+
+
+
+
+  </div>
+
+  <!-- Brac -->
+
+   <div class=" border-1 border-white shadow-sm rounded-xl w-full bg-white"> <!--  //card -->
+    <!-- head -->
+    <div class="flex justify-between items-center p-4" >
+      <img src="./assets/emergency.png" alt="" class="w-[32px] h-[32px]">
+      <img src="./assets/Vector (2).png" alt="" id="heart8">
+    </div>
+
+    <!-- body -->
+
+    <div class="px-4">
+      <h4 class="primary-font font-bold text-[24px]" id="name8">Brac Helpline</h4>
+      <h5 class="secondary-font text-[18px] text-gray-500 mb-6">Brac</h5>
+      <h3 class="font-bold text-[20px]" id="num8">16445</h3>
+      <p class="primary-font border-2 border-white bg-[#F2F2F2] w-[53px] rounded-full text-center ml-[-10px] primary-font text-gray-500">NGO</p>
+    </div>
+
+    <!-- Footer -->
+     <div class="lg:px-4  pl-2 mt-5 mb-8 flex gap-3">
+      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500">Copy</button>
+
+      <button class="btn btn-active w-[180px] bg-[#00A63E] rounded-[8px text-white" id="call-btn8">Call</button>
+     </div>
+
+
+
+
+  </div>
+
+  <!-- Bangladesh -->
+
+   <div class=" border-1 border-white shadow-sm rounded-xl w-full bg-white"> <!--  //card -->
+    <!-- head -->
+    <div class="flex justify-between items-center p-4" >
+      <img src="./assets/emergency.png" alt="" class="w-[32px] h-[32px]">
+      <img src="./assets/Vector (2).png" alt="" id="heart9">
+    </div>
+
+    <!-- body -->
+
+    <div class="px-4">
+      <h4 class="primary-font font-bold text-[24px]" id="name9">Bangladesh Railway Helpline</h4>
+      <h5 class="secondary-font text-[18px] text-gray-500 mb-6">Bangladesh Railway</h5>
+      <h3 class="font-bold text-[20px]" id="num9">163</h3>
+      <p class="primary-font border-2 border-white bg-[#F2F2F2] w-[53px] rounded-full text-center ml-[-10px] primary-font text-gray-500">Travel</p>
+    </div>
+
+    <!-- Footer -->
+     <div class="lg:px-4  pl-2 mt-5 mb-8 flex gap-3">
+      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500">Copy</button>
+
+      <button class="btn btn-active w-[180px] bg-[#00A63E] rounded-[8px text-white" id="call-btn9">Call</button>
+     </div>
+
+
+
+
+  </div>
+
+ </div>
 
   <!-- History -->
    <div></div>
 
   </main>
 
-
+<script src="./js/index.js"></script>
 </body>
 </html>
