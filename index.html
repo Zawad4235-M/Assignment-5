@@ -39,7 +39,7 @@
       </div>
       <!-- copy -->
       <div class="flex gap-2 w-[120px] border-2 border-white rounded-[50px] justify-center items-center bg-[#00A63E] text-white">
-        <h4 class="font-extrabold">0</h4>
+        <h4 class="font-extrabold" id="copy-count">0</h4>
         <span class="font-extrabold">Copy</span>
       </div>
     </div>
@@ -56,7 +56,7 @@
 
   <!-- Main Section -->
 
-  <main class="lg:max-w-[1800px] border-2 border-white mx-auto my-0 h-[100vh] mt-7">
+  <main class="lg:max-w-[1800px] border-2 border-white mx-auto my-0  mt-7 flex flex-col lg:flex-row gap-3">
     <!-- cards -->
    <div class="grid lg:grid-cols-3 gap-7">
 
@@ -80,7 +80,7 @@
 
     <!-- Footer -->
      <div class="lg:px-4  pl-2 mt-5 mb-8 flex gap-3">
-      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500">Copy</button>
+      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500" id="copy1">Copy</button>
 
       <button class="btn btn-active w-[180px] bg-[#00A63E] rounded-[8px text-white" id="call-btn1">Call</button>
      </div>
@@ -109,7 +109,7 @@
 
     <!-- Footer -->
      <div class="lg:px-4  pl-2 mt-5 mb-8 flex gap-3">
-      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500">Copy</button>
+      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500" id="copy2">Copy</button>
 
       <button class="btn btn-active w-[180px] bg-[#00A63E] rounded-[8px text-white" id="call-btn2">Call</button>
      </div>
@@ -139,7 +139,7 @@
 
     <!-- Footer -->
      <div class="lg:px-4  pl-2 mt-5 mb-8 flex gap-3">
-      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500">Copy</button>
+      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500" id="copy3">Copy</button>
 
       <button class="btn btn-active w-[180px] bg-[#00A63E] rounded-[8px text-white" id="call-btn3">Call</button>
      </div>
@@ -169,7 +169,7 @@
 
     <!-- Footer -->
      <div class="lg:px-4  pl-2 mt-5 mb-8 flex gap-3">
-      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500">Copy</button>
+      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500" id="copy4">Copy</button>
 
       <button class="btn btn-active w-[180px] bg-[#00A63E] rounded-[8px text-white" id="call-btn4">Call</button>
      </div>
@@ -199,7 +199,7 @@
 
     <!-- Footer -->
      <div class="lg:px-4  pl-2 mt-5 mb-8 flex gap-3">
-      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500">Copy</button>
+      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500" id="copy5">Copy</button>
 
       <button class="btn btn-active w-[180px] bg-[#00A63E] rounded-[8px text-white" id="call-btn5">Call</button>
      </div>
@@ -229,7 +229,7 @@
 
     <!-- Footer -->
      <div class="lg:px-4  pl-2 mt-5 mb-8 flex gap-3">
-      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500">Copy</button>
+      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500" id="copy6">Copy</button>
 
       <button class="btn btn-active w-[180px] bg-[#00A63E] rounded-[8px text-white" id="call-btn6">Call</button>
      </div>
@@ -259,7 +259,7 @@
 
     <!-- Footer -->
      <div class="lg:px-4  pl-2 mt-5 mb-8 flex gap-3">
-      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500">Copy</button>
+      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500" id="copy7">Copy</button>
 
       <button class="btn btn-active w-[180px] bg-[#00A63E] rounded-[8px text-white" id="call-btn7">Call</button>
      </div>
@@ -289,7 +289,7 @@
 
     <!-- Footer -->
      <div class="lg:px-4  pl-2 mt-5 mb-8 flex gap-3">
-      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500">Copy</button>
+      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500" id="copy8">Copy</button>
 
       <button class="btn btn-active w-[180px] bg-[#00A63E] rounded-[8px text-white" id="call-btn8">Call</button>
      </div>
@@ -319,7 +319,7 @@
 
     <!-- Footer -->
      <div class="lg:px-4  pl-2 mt-5 mb-8 flex gap-3">
-      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500">Copy</button>
+      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500" id="copy9">Copy</button>
 
       <button class="btn btn-active w-[180px] bg-[#00A63E] rounded-[8px text-white" id="call-btn9">Call</button>
      </div>
@@ -332,7 +332,22 @@
  </div>
 
   <!-- History -->
-   <div></div>
+   <div class="border-2 border-red-500 lg:w-[400px] bg-white rounded-[12px]">
+
+  <!-- head -->
+   <div class="flex justify-between items-center pt-5">
+    <!-- left -->
+     <div class="ml-5">
+      <h3 class="font-bold text-[18px]">Call History</h3>
+     </div>
+
+     <!-- right -->
+      <div class="mr-5">
+        <button class="btn btn-active bg-[#00A63E] rounded-[50px] text-white text-[18px]">Clear</button>
+      </div>
+   </div>
+
+   </div>
 
   </main>
 

@@ -58,3 +58,40 @@ call("call-btn6","name6","num6")
 call("call-btn7","name7","num7")
 call("call-btn8","name8","num8")
 call("call-btn9","name9","num9")
+
+
+// Copy Count
+
+function copy_count(id,number)
+{
+  document.getElementById(id)
+  .addEventListener("click",async function(e){
+    e.preventDefault()
+    // copy count
+    const copy_count_value = parseInt(document.getElementById("copy-count").innerText)
+    document.getElementById("copy-count").innerText = copy_count_value + 1;
+
+    // clipboard copy
+
+    const number_value = document.getElementById(number).innerText
+
+    try{
+      await navigator.clipboard.writeText(number_value);
+      alert("Number Copied: "+number_value)
+    }
+    catch(err)
+    {
+      console.error("Failed ot copy", err);
+    }
+  })
+}
+
+copy_count("copy1","num1")
+copy_count("copy2","num2")
+copy_count("copy3","num3")
+copy_count("copy4","num4")
+copy_count("copy5","num5")
+copy_count("copy6","num6")
+copy_count("copy7","num7")
+copy_count("copy8","num8")
+copy_count("copy9","num9")
