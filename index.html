@@ -15,11 +15,12 @@
 <body>
   <!-- Nav -->
 
-  <nav class="p-4 flex flex-col lg:flex-row lg:justify-between primary-font">
+  <nav class="p-4 flex flex-col lg:flex-row lg:justify-between primary-font max-w-[1920px]">
     <!-- Left Corner -->
-    <div class="flex gap-3 justify-center mb-4 lg:mb-0">
+    <div class="flex flex-col gap-3 lg:justify-center mb-4 lg:mb-0 lg:flex-row items-center">
       <img src="./assets/logo.png" alt="" class="h-[50px] w-[50px]">
-      <h3 class="font-bold text-[#006747] text-xl">Emergency <br>Service</h3>
+      <h3 class="font-bold text-[#006747] text-xl">Emergency<br class="hidden lg:block"> Service
+</h3>
     </div>
 
 
@@ -47,11 +48,52 @@
 
   <!-- Hero -->
 
-  <div class="flex flex-col justify-center items-center bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] p-5 text-white primary-font">
+  <div class="flex flex-col justify-center items-center bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] p-5 text-white primary-font max-w-[1920px]">
     <img src="./assets/logo-dark.png" alt="" class="w-[92px] h-[92px]">
     <h3 class=" font-semibold lg:font-bold lg:text-[40px]">Emergency Service Directory</h3>
     <p class="font-semibold text-[20px] text-center mt-[10px]">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
   </div>
+
+  <!-- Main Section -->
+
+  <main class="lg:max-w-[1800px] border-2 border-red-500 mx-auto my-0 h-[100vh] mt-7">
+    <!-- cards -->
+   <div>
+  <!--National Emergency  -->
+   <div class="lg:w-[436px] border-1 border-white shadow-sm rounded-xl"> <!--  //card -->
+    <!-- head -->
+    <div class="flex justify-between items-center p-4" >
+      <img src="./assets/emergency.png" alt="" class="w-[32px] h-[32px]">
+      <img src="./assets/Vector (2).png" alt="">
+    </div>
+
+    <!-- body -->
+
+    <div class="px-4">
+      <h4 class="primary-font font-bold text-[24px]">National Emergency Number</h4>
+      <h5 class="secondary-font text-[18px] text-gray-500 mb-6">National Emergency</h5>
+      <h3 class="font-bold text-[20px]">999</h3>
+      <p class="primary-font border-2 border-white bg-[#F2F2F2] w-[53px] rounded-full text-center ml-[-10px] primary-font text-gray-500">All</p>
+    </div>
+
+    <!-- Footer -->
+     <div class="lg:px-4  pl-2 mt-5 mb-8 flex gap-3">
+      <button class="btn btn-active w-[180px] bg-white rounded-[8px] text-gray-500">Copy</button>
+
+      <button class="btn btn-active w-[180px] bg-[#00A63E] rounded-[8px text-white">Call</button>
+     </div>
+
+
+
+
+  </div>
+
+   </div>
+
+  <!-- History -->
+   <div></div>
+
+  </main>
 
 
 </body>
