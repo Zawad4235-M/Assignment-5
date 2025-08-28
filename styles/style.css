@@ -9,3 +9,16 @@
 .secondary-font{
   font-family: "Roboto", sans-serif;
 }
+
+
+
+.div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border: 2px solid white;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
