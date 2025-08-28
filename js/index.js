@@ -21,43 +21,75 @@ heart_count_fun("heart8")
 heart_count_fun("heart9")
 
 
-// Call
+// Call and History
 
+function callWithHistory(id, nameId, numberId) {
+  document.getElementById(id).addEventListener("click", function(e) {
+    e.preventDefault();
 
-function call(id,nm,number) {
-  document.getElementById(id)
-    .addEventListener("click", function(e) {
-      e.preventDefault();
-      
-      const name_value = document.getElementById(nm).innerText;
+    const coinElem = document.getElementById("base-coin");
+    let coin_value = parseInt(coinElem.innerText);
 
-      const number_value = document.getElementById(number).innerText
+    // check coins
+    if (coin_value - 20 < 0) {
+      alert("Invalid: not enough coins");
+      return;
+    }
 
+    // deduct coins
+    coin_value -= 20;
+    coinElem.innerText = coin_value;
 
-      // coins deduction
-      const coinElem = document.getElementById("base-coin");
-      const coin_value = parseInt(coinElem.innerText);
+    // get name & number
+    const nameEl = document.getElementById(nameId);
+    const numberEl = document.getElementById(numberId);
+    const name_value = nameEl.innerText;
+    const number_value = numberEl.innerText;
 
-      if (coin_value - 20 < 0) {
-        alert("Invalid");
-        return;
-      }
+    alert("Calling " + name_value + " " + number_value);
 
-      coinElem.innerText = coin_value - 20;
-      alert("Calling "+name_value+" "+number_value);
-    });
+    // create history div
+    const newdiv = document.createElement("div");
+    const innerDiv = document.createElement("div");
+
+    const history_name = document.createElement("h4");
+    const history_number = document.createElement("h3");
+    const history_time = document.createElement("span");
+
+    history_name.innerText = name_value;
+    history_number.innerText = number_value;
+    history_time.innerText = new Date().toLocaleTimeString();
+
+    //adding style
+    history_name.className = nameEl.className + " text-[18px] font-bold";
+    history_number.className = numberEl.className + " text-gray-500";
+    history_time.className = "text-18 font-bold"
+
+    // assemble divs
+    innerDiv.appendChild(history_name);
+    innerDiv.appendChild(history_number);
+
+    newdiv.appendChild(innerDiv);
+    newdiv.appendChild(history_time);
+
+    newdiv.className = "div p-2 m-2"; // outer div styling
+
+    document.getElementById("history-body").appendChild(newdiv);
+  });
 }
 
+// --- Function calls ---
+callWithHistory("call-btn1","name1","num1");
+callWithHistory("call-btn2","name2","num2");
+callWithHistory("call-btn3","name3","num3");
+callWithHistory("call-btn4","name4","num4");
+callWithHistory("call-btn5","name5","num5");
+callWithHistory("call-btn6","name6","num6");
+callWithHistory("call-btn7","name7","num7");
+callWithHistory("call-btn8","name8","num8");
+callWithHistory("call-btn9","name9","num9");
 
-call("call-btn1","name1","num1")
-call("call-btn2","name2","num2")
-call("call-btn3","name3","num3")
-call("call-btn4","name4","num4")
-call("call-btn5","name5","num5")
-call("call-btn6","name6","num6")
-call("call-btn7","name7","num7")
-call("call-btn8","name8","num8")
-call("call-btn9","name9","num9")
+
 
 
 // Copy Count
@@ -97,64 +129,18 @@ copy_count("copy8","num8")
 copy_count("copy9","num9")
 
 
-// History
 
-function history_div(id,name,number){
-  document.getElementById(id)
-  .addEventListener("click", function(e){
-    e.preventDefault()
+// Clear Button
 
-    const newdiv = document.createElement("div")
-    const newdiv2 = document.createElement("div")
+document.getElementById("clear-btn")
+.addEventListener("click", function(e){
+  e.preventDefault()
+  
+  const historyBody = document.getElementById("history-body")
 
-    const name_value = document.getElementById(name).innerText
-    const number_value = document.getElementById(number).innerText
-   const now = new Date()
-   const Time = now.toLocaleTimeString()
-
-   const name_el = document.getElementById(name)
-   const number_el = document.getElementById(number)
-
-    const history_name = document.createElement("h4")
-    const history_number = document.createElement("h3")
-    const history_time = document.createElement("span")
-
-    history_name.innerText= name_value
-    history_number.innerText= number_value
-    history_time.innerText = Time
-
-    history_name.className = name_el.className
-    history_name.className = "text-[18px] font-bold"
-    history_number.className =  "text-gray-500"
-
-    newdiv2.appendChild(history_name)
-    newdiv2.appendChild(history_number)
-
-    newdiv.appendChild(newdiv2)
-    newdiv.appendChild(history_time)
-
-    newdiv.className = "div p-2 m-2"
-
-    // coin error
-    const coinElem = document.getElementById("base-coin");
-    const coin_value = parseInt(coinElem.innerText);
-
-    if (coin_value - 20 < 0) {
-        return;
-      }
-    
+  while(historyBody.firstChild){
+    historyBody.removeChild(historyBody.firstChild)
+  }
+})
 
 
-    document.getElementById("history-body").appendChild(newdiv)
-  })
-}
-
-history_div("call-btn1","name1","num1")
-history_div("call-btn2","name2","num2")
-history_div("call-btn3","name3","num3")
-history_div("call-btn4","name4","num4")
-history_div("call-btn5","name5","num5")
-history_div("call-btn6","name6","num6")
-history_div("call-btn7","name7","num7")
-history_div("call-btn8","name8","num8")
-history_div("call-btn9","name9","num9")
